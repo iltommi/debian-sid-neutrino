@@ -6,5 +6,5 @@ RUN git clone https://github.com/iltommi/PythonQt.git
 RUN cd PythonQt && cmake -UQT_QMAKE_EXECUTABLE -DPythonQt_Wrap_QtAll=TRUE -DQt5_DIR=/usr/lib/x86_64-linux-gnu/cmake . && make -j4 install
 
 RUN git clone https://github.com/iltommi/neutrino.git
-RUN cd neutrino && mkdir Linux && cd Linux && cmake .. && make -j4 package
+RUN cd neutrino && mkdir Linux && cd Linux && cmake .. && make -j4 package && make install
 RUN find neutrino
